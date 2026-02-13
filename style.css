@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #5fd3c4, #5ab0d6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard {
+  width: 90%;
+  max-width: 1100px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.card-title {
+  color: #5b6ee1;
+  margin-bottom: 15px;
+}
+
+.top-section {
+  display: grid;
+  grid-template-columns: 1fr 1.7fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  resize: none;
+  height: 70px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px;
+  width: 100%;
+
+  background: linear-gradient(135deg, #63cdda, #5bbad5);
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #5bbad5, #4aa6bf);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.event-controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.event-controls button {
+  width: 50%;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.empty-text {
+  color: #888;
+}
+
+.event-card {
+  background: #f1f6fb;
+  border-radius: 12px;
+  padding: 18px;
+  position: relative;
+}
+
+.event-card h4 {
+  margin: 0 0 6px;
+}
+
+.event-card p {
+  margin: 6px 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #5b6ee1;
+  color: white;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: #ff6b6b;
+  color: white;
+
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #ff4c4c;
+  transform: scale(1.1);
+}
+
+.dom-demo input {
+  padding: 10px;
+}

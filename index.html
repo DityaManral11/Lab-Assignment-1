@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Event Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="dashboard">
+    <h1>🎯 Smart Event Dashboard</h1>
+
+    <div class="top-section">
+
+      <div class="card">
+        <h3 class="card-title">Add New Event</h3>
+
+        <label>Event Title:</label>
+        <input type="text" id="title">
+
+        <label>Event Date:</label>
+        <input type="date" id="date">
+
+        <label>Category:</label>
+        <select id="category">
+          <option>Conference</option>
+          <option>Workshop</option>
+          <option>Meetup</option>
+        </select>
+
+        <label>Description:</label>
+        <textarea id="description"></textarea>
+
+        <button id="addBtn">Add Event</button>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">My Events</h3>
+
+        <div class="event-controls">
+          <button id="clearBtn">Clear All Events</button>
+          <button id="sampleBtn">Add Sample Events</button>
+        </div>
+
+        <div id="eventList" class="event-grid">
+          <p class="empty-text">No events yet. Add your first event!</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card dom-demo">
+      <h3 class="card-title">DOM Manipulation Demo</h3>
+      <input type="text" id="domInput" placeholder="Press any key to see the difference!">
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
