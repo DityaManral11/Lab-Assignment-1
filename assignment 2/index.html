@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Async Weather Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>🌤️ Async Weather Tracker</h1>
+
+        <div class="top-section">
+
+            <!-- LEFT CARD -->
+            <div class="card">
+                <form id="weather_form">
+                    <label for="city"><strong>Search City</strong></label><br><br>
+                    <input type="text" id="city" placeholder="Enter city">
+                    <input type="submit" value="Search">
+                </form>
+
+                <div class="history">
+                    <h4>Search History</h4>
+                    <ul id="historyList"></ul>
+                </div>
+            </div>
+
+            <!-- RIGHT CARD -->
+            <div class="card" id="weatherInfo">
+                <h3>Weather Info</h3>
+            </div>
+
+        </div>
+
+        <!-- CONSOLE EVENT LOOP -->
+        <div class="event card">
+            <h3>Console – Event Loop</h3>
+            <pre id="logs"></pre>
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>

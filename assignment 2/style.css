@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", "Segoe UI Emoji", sans-serif;
+    background: linear-gradient(to bottom, #1e2a5a, #283c86);
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 85%;
+    margin-top: 40px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Top layout */
+.top-section {
+    display: flex;
+    gap: 20px;
+}
+
+/* Card style */
+.card {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Form */
+input[type="text"] {
+    width: 65%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    padding: 8px 15px;
+    background: orangered;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+/* History */
+.history {
+    margin-top: 20px;
+}
+
+#historyList {
+    padding: 0;
+}
+
+#historyList li {
+    list-style: none;
+    display: inline-block;
+    background: orangered;
+    color: white;
+    padding: 6px 12px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Weather Info Border Rows */
+.weather-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    margin: 8px 0;
+    border-left: 4px solid orangered;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Event Logs */
+.event {
+    margin-top: 25px;
+    background: #0d1b4c;
+    color: white;
+}
+
+#logs {
+    max-height: 200px;
+    overflow-y: auto;
+    font-family: monospace;
+    white-space: pre-line;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .top-section {
+        flex-direction: column;
+    }
+}

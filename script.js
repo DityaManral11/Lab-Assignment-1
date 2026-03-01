@@ -82,3 +82,30 @@ function clearForm() {
 document.getElementById("domInput").addEventListener("keyup", function () {
   this.style.backgroundColor = "#e0f2f1";
 });
+
+
+
+
+
+const form = document.getElementById("weather_form");
+
+form.addEventListener('submit',async (e)=>{
+    e.preventDefault()
+    const data = city.value
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${data}&appid=195f92a4c09e7551dc56d61b65e51210`)
+    const weatherData = await response.json()
+    console.log(weatherData)
+    // console.log("City", weatherData.name)
+    // console.log("Temp", (weatherData.main.temp-273).toFixed(1), "C")
+    // console.log("Weather", weatherData.weather[0].main)
+    // console.log("Humidity", weatherData.main.humidity)
+    // console.log("Wind", weatherData.wind.speed,"m/s")
+    weatherInfo.innerHTML = `<h3>Weather Info</h3>
+    <p>City: ${weatherData.name}</p>
+    <p>Temperature: ${(weatherData.main.temp-273).toFixed(1)} C</p>
+    <p>Weather: ${weatherData.weather[0].main}</p>
+    <p>Humidity: ${weatherData.main.humidity}</p>
+    <p>Speed: ${weatherData.wind.speed} m/s</p>`
+})
+
+
